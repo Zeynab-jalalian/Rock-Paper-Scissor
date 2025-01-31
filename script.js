@@ -22,6 +22,31 @@ const game=document.querySelector('.container'),
       let randomindex=Math.floor(Math.random() * 3);
       let cpuValue=["img/rock.png","img/paper.png","img/scissors.png"];
       cpu.src=cpuValue[randomindex];
+
+      let outcomes={
+        PP:'Draw',
+        PS:'cpu',
+        PR:'user',
+
+        SP:'user',
+        SS:'Draw',
+        SR:'cpu',
+
+        RR:'Draw',
+        RS:'user',
+        RP:'cpu',
+
+      }
+     
+     let  cpuR=["R","S","P"][randomindex];
+     let  userR=["R","S","P"][index];
+     let outcomesValue=outcomes[cpuR + userR];
+
+      if(cpuR===userR){
+        resultText.innerHTML="Match Draw";
+      }else{
+        resultText.innerHTML=`${outcomesValue} won!!`
+      }
     },2500)
   })
  })
