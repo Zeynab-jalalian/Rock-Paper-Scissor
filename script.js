@@ -18,7 +18,10 @@ const game=document.querySelector('.container'),
 
     setTimeout(function(){
      game.classList.remove('start');
-     
+      user.src=e.target.querySelector('img').src;
+      let randomindex=Math.floor(Math.random() * 3);
+      let cpuValue=["img/rock.png","img/paper.png","img/scissors.png"];
+      cpu.src=cpuValue[randomindex];
     },2500)
   })
  })
