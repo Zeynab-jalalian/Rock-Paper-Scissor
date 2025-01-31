@@ -23,6 +23,12 @@ body{
     background: white;
     box-shadow: 0 5px 10px rgba(0,0,0,0.1);
 }
+.user img{
+    transform: rotate(90deg);
+}
+.cpu img{
+    transform: rotate(-90deg) rotateY(180deg);
+}
 .result_images{
     display: flex;
     column-gap: 7rem;
@@ -45,6 +51,9 @@ body{
     align-items: center;
     opacity: 0.5;
     transition: 0.3s ease;
+}
+.option.active{
+    opacity: 1;
 }
 .option img{
     pointer-events: none;
