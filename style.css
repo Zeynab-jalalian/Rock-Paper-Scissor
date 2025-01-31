@@ -43,7 +43,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: pointer;
+   
 }
 .options .option{
     display: flex;
@@ -51,6 +51,7 @@ body{
     align-items: center;
     opacity: 0.5;
     transition: 0.3s ease;
+    cursor: pointer;
 }
 .option.active{
     opacity: 1;
@@ -64,4 +65,23 @@ body{
 }
 .option:hover{
     opacity: 1;
+}
+.container.start .option{
+    pointer-events: none;
+}
+.container.start .user{
+  animation: user 0.7s ease infinite;
+}
+.container.start .cpu{
+    animation: cpu 0.7s ease infinite;
+}
+@keyframes user{
+    50%{
+        transform: rotate(10deg);
+    }
+}
+@keyframes cpu{
+    50%{
+        transform: rotate(-10deg);
+    }
 }

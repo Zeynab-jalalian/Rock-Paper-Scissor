@@ -7,11 +7,15 @@ const game=document.querySelector('.container'),
  options.forEach(function(image,index){
   image.addEventListener('click',(e)=>{
     image.classList.add('active');
-
+    game.classList.add('start');
     options.forEach(function(image2,index2){
     if(index!==index2){
       image2.classList.remove('active');
     }
     })
+    setTimeout(function(){
+     game.classList.remove('start');
+    
+    },2500)
   })
  })
