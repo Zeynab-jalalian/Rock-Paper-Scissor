@@ -13,9 +13,10 @@ const game=document.querySelector('.container'),
       image2.classList.remove('active');
     }
     })
+    user.src=cpu.src='img/rock.png';
     setTimeout(function(){
      game.classList.remove('start');
-    
+     
     },2500)
   })
  })
