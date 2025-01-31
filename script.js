@@ -1,7 +1,7 @@
 const game=document.querySelector('.container'),
  user=document.querySelector('.user img'),
  cpu=document.querySelector('.cpu img'),
- resultText=document.querySelector('.reslut_text'),
+ resultText=document.querySelector('.result_text'),
  options=document.querySelectorAll('.option');
 
  options.forEach(function(image,index){
@@ -14,6 +14,8 @@ const game=document.querySelector('.container'),
     }
     })
     user.src=cpu.src='img/rock.png';
+    resultText.innerHTML="Wait..."
+
     setTimeout(function(){
      game.classList.remove('start');
      
